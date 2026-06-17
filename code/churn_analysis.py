@@ -45,3 +45,13 @@ plt.title("Contract Type Compared with Churn")
 plt.xticks(rotation=30)
 plt.savefig("figures/contract_vs_churn.png", bbox_inches="tight")
 plt.close()
+
+# Graph 3: Monthly charges vs churn
+plt.figure(figsize=(6, 4))
+sns.boxplot(x="Churn", y="MonthlyCharges", data=df)
+plt.title("Monthly Charges Compared with Churn")
+plt.savefig("figures/monthly_charges_vs_churn.png", bbox_inches="tight")
+plt.close()
+
+print("\nGraphs saved in figures folder")
+
