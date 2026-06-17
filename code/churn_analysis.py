@@ -22,3 +22,11 @@ print(df.head())
 print(df.info())
 print("\nMissing values before cleaning:")
 print(df.isnull().sum())
+
+# Clean TotalCharges column
+df["TotalCharges"] = pd.to_numeric(df["TotalCharges"], errors="coerce")
+df = df.dropna()
+
+print("\nDataset shape after cleaning:", df.shape)
+print("\nMissing values after cleaning:")
+print(df.isnull().sum())
