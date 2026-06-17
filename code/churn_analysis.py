@@ -37,3 +37,11 @@ sns.countplot(x="Churn", data=df)
 plt.title("Customer Churn Distribution")
 plt.savefig("figures/churn_distribution.png", bbox_inches="tight")
 plt.close()
+
+# Graph 2: Contract type vs churn
+plt.figure(figsize=(7, 4))
+sns.countplot(x="Contract", hue="Churn", data=df)
+plt.title("Contract Type Compared with Churn")
+plt.xticks(rotation=30)
+plt.savefig("figures/contract_vs_churn.png", bbox_inches="tight")
+plt.close()
