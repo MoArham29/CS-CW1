@@ -30,3 +30,10 @@ df = df.dropna()
 print("\nDataset shape after cleaning:", df.shape)
 print("\nMissing values after cleaning:")
 print(df.isnull().sum())
+
+# Graph 1: Churn distribution
+plt.figure(figsize=(6, 4))
+sns.countplot(x="Churn", data=df)
+plt.title("Customer Churn Distribution")
+plt.savefig("figures/churn_distribution.png", bbox_inches="tight")
+plt.close()
