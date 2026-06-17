@@ -12,3 +12,13 @@ from sklearn.metrics import accuracy_score, classification_report
 
 # Create figures folder if it does not exist
 os.makedirs("figures", exist_ok=True)
+
+# Load dataset
+df = pd.read_csv("data/WA_Fn-UseC_-Telco-Customer-Churn.csv")
+
+print("Dataset loaded successfully")
+print("Dataset shape:", df.shape)
+print(df.head())
+print(df.info())
+print("\nMissing values before cleaning:")
+print(df.isnull().sum())
